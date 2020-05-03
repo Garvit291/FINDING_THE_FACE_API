@@ -10,8 +10,6 @@ const capp = new Clarifai.App({
 });
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 const knex = require('knex');
-
-
 const db=knex({
   client: 'pg',
   connection: {
