@@ -15,10 +15,9 @@ const knex = require('knex');
 const db=knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-defined-71031';,
-    user : 'postgres',
-    password :'test',
-    database :'finding-the-face'
+    connectionString : process.env.DATABASE_URL,
+    ssl : true
+    
   }
 }); 
 
