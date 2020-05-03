@@ -15,7 +15,7 @@ const knex = require('knex');
 const db=knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-defined-71031';,
     user : 'postgres',
     password :'test',
     database :'finding-the-face'
@@ -83,7 +83,7 @@ app.post('/register', (req,res)=>{
 					.then(trx.commit) 
          	})
          	.catch(err=>{
-         		res.status(400).json(err);
+         		res.status(400).json('unable to register');
          	})
 
 })
