@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 const bcrypt = require('bcrypt-nodejs');
-const cors = require('cors')
+const cors = require('cors');
+app.use(cors())
 const Clarifai = require('clarifai');
 app.use(express.json());
-app.use(cors())
+
 const capp = new Clarifai.App({
 	apiKey: '051186c68401496bbcca319274dd6e40'
 });
