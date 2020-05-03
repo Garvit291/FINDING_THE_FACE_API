@@ -8,7 +8,7 @@ app.use(cors())
 const capp = new Clarifai.App({
 	apiKey: '051186c68401496bbcca319274dd6e40'
 });
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 const knex = require('knex');
 
 
